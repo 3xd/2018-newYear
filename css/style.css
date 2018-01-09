@@ -1,0 +1,131 @@
+@charset "UTF-8";
+html {
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+}
+html,
+body {
+  min-height: 100vh;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Microsoft JhengHei, Arial, Helvetica, sans-serif;
+  background: #ff3019;
+  /* Old browsers */
+  background: -moz-radial-gradient(top, ellipse cover, #ff3019 0%, #b70303 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(top, ellipse cover, #ff3019 0%, #b70303 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: url(../images/bg-02.png), radial-gradient(ellipse at top, #ff3019 0%, #b70303 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3019', endColorstr='#b70303', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+.wrapper {
+  position: relative;
+  height: calc(100vh - 8rem);
+  width: 100%;
+  max-width: 25rem;
+  min-width: 20rem;
+  min-height: 18rem;
+  margin: 4rem auto;
+  zoom: 95%;
+  overflow: hidden;
+}
+.wrapper div {
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: none;
+}
+.wrapper .pic-01 {
+  width: 100%;
+  max-height: 22rem;
+  left: 0;
+  right: 0;
+  top: 5rem;
+  text-align: center;
+}
+.wrapper .pic-01 img {
+  width: 100%;
+  max-width: 280px;
+}
+.wrapper .text-block {
+  color: #f9dc92;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  top: 5.5rem;
+  text-shadow: 0 0 .63rem #fff;
+}
+.wrapper .txt-right {
+  right: 0;
+}
+.wrapper .txt-left {
+  left: 0;
+}
+.wrapper .top-text-block {
+  color: #f9dc92;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-shadow: 0 0 .63rem #fff;
+}
+.wrapper .top-text-block img {
+  width: .94rem;
+  padding: 0 .2rem;
+  position: relative;
+  top: -0.38rem;
+}
+.pic-01 {
+  animation-duration: 1s;
+  animation-name: pic-01;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@-webkit-keyframes pic-01 {
+  from {
+    top: 2.5rem;
+  }
+  to {
+    top: 5rem;
+  }
+}
+@-moz-keyframes pic-01 {
+  from {
+    top: 2.5rem;
+  }
+  to {
+    top: 5rem;
+  }
+}
+.snow {
+  width: 100%;
+  height: 80vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+}
+@media (max-width: 700px) {
+  @viewport {
+    orientation: portrait;
+  }
+  .wrapper {
+    height: 160vh;
+    min-height: 18rem;
+  }
+}
+@media (max-width: 700px) and (orientation: landscape) {
+  @viewport {
+    orientation: portrait;
+  }
+  .wrapper {
+    height: 160vh;
+    min-height: 18rem;
+  }
+}
